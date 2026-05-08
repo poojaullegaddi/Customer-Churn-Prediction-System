@@ -55,8 +55,6 @@ Model Evaluation
 Hyperparameter Tuning
        ↓
 Save Best Model
-       ↓
-Flask API Deployment
 ```
 
 ---
@@ -79,7 +77,6 @@ Flask API Deployment
 * Confusion Matrix
 * Feature Importance Visualization
 * Model saving using Joblib
-* Flask API for real-time predictions
 * Resume-level project structure
 
 ---
@@ -94,7 +91,6 @@ Flask API Deployment
 | Matplotlib   | Data visualization        |
 | Seaborn      | Statistical visualization |
 | Scikit-learn | Machine Learning          |
-| Flask        | API Development           |
 | Joblib       | Model serialization       |
 | VS Code      | Development Environment   |
 
@@ -147,7 +143,6 @@ customer-churn-project/
 ├── venv/
 │
 ├── train.py
-├── app.py
 ├── requirements.txt
 ├── README.md
 │
@@ -158,7 +153,6 @@ customer-churn-project/
 ```
 
 ---
-
 requirements.txt
 ```
 
@@ -173,6 +167,27 @@ scikit-learn
 flask
 joblib
 ```
+
+---
+
+# How to Run Project
+
+## Step 1: Train Model
+
+```bash
+python train.py
+```
+
+This will:
+
+* Load dataset
+* Clean data
+* Train models
+* Evaluate performance
+* Save model
+* Generate charts
+
+---
 
 ---
 
@@ -326,36 +341,6 @@ These visualizations help understand:
 * Important features
 * Model performance
 * Business insights
-
----
-
-# Flask API
-
-The project also includes a Flask API for real-time predictions.
-
-Example Endpoint:
-
-```text
-POST /predict
-```
-
-Example Input:
-
-```json
-{
-  "tenure": 12,
-  "MonthlyCharges": 70,
-  "TotalCharges": 850
-}
-```
-
-Example Output:
-
-```json
-{
-  "prediction": "Churn"
-}
-```
 
 ---
 
